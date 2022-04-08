@@ -1,0 +1,145 @@
+GET http://localhost:8080/api/drivers
+
+###
+
+GET http://localhost:8080/api/teams
+
+###
+
+GET http://localhost:8080/api/drivers/4
+
+###
+
+GET http://localhost:8080/api/drivers/77
+
+###
+
+GET http://localhost:8080/api/teams/McLaren
+
+###
+
+GET http://localhost:8080/api/teams/Red Bull Racing
+
+###
+
+GET http://localhost:8080/api/teams/Haas
+
+###
+
+GET http://localhost:8080/api/teams/McLaren/drivers
+
+###
+
+POST http://localhost:8080/api/drivers
+Content-Type: application/json
+
+{
+  "startingNo":22,
+  "name":"SERGIO",
+  "surname":"PEREZ",
+  "nationality":"MEXICO",
+  "dateOfBirth":"1989-08-28",
+  "team" : "Red Bull Racing",
+  "placeOfBirth":"MEXICO",
+  "pointsEarned":1689.0,
+  "racesWon":10,
+  "gpsEntered":172
+
+}
+
+###
+
+POST http://localhost:8080/api/teams/Ferrari/drivers
+Content-Type: application/json
+
+{
+"startingNo":77,
+"name":"Valtteri",
+"surname":"Bottas",
+"nationality":"Finland",
+"dateOfBirth":"1989-08-28",
+"placeOfBirth":"Nastola",
+"pointsEarned":1689.0,
+"racesWon":10,
+"gpsEntered":172
+
+}
+
+###
+
+DELETE http://localhost:8080/api/drivers/3
+
+###
+
+GET http://localhost:8080/api/teams/Haas/drivers
+
+###
+
+GET http://localhost:8080/api/teams/McLaren/drivers/77
+
+###
+
+POST http://localhost:8080/api/teams
+Content-Type: application/json
+
+{
+
+  "teamName":"yry",
+  "nationality":"USA",
+  "firstEntryYear":2016,
+  "worldChampionshipsWon":0,
+  "racesWon":0,
+  "teamChief":"Guenther Steiner",
+  "chassis":"VF-21"
+
+}
+
+###
+
+GET http://localhost:8080/api/teams/Mercedes-AMG/drivers
+
+###
+
+PUT http://localhost:8080/api/drivers/77
+Content-Type: application/json
+
+{
+
+  "pointsEarned":1000.0,
+  "racesWon":10,
+  "gpsEntered":100
+
+}
+
+###
+
+PUT http://localhost:8080/api/teams/Ferrari
+Content-Type: application/json
+
+{
+  "worldChampionshipsWon":20,
+  "racesWon":100,
+  "teamChief":"Stefano Domenicalli",
+  "chassis":"SF-22"
+
+}
+
+###
+
+DELETE http://localhost:8080/api/teams/Ferrari
+
+####
+
+DELETE http://localhost:8080/api/teams/McLaren/drivers/3
+
+###
+PUT http://localhost:8080/api/teams/McLaren/drivers/4
+Content-Type: application/json
+
+{
+
+  "pointsEarned":3333.0,
+  "racesWon":33,
+  "gpsEntered":333
+
+}
